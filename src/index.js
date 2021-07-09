@@ -1,17 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import Level from "./level";
+import Home from "./home";
+import References from "./references";
+import About from "./about";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+class Site extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/game">Game</Link>
+              </li>
+              <li>
+                <Link to="/references">References</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+            </ul>
+          </nav>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/references">
+              <References />
+            </Route>
+            <Route path="/game">
+              <Level />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+}
+
+ReactDOM.render(<Site />, document.getElementById("root"));
