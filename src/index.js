@@ -14,34 +14,45 @@ class Site extends React.Component {
     return (
       <Router>
         <div>
-          <div class="navbar">
-            <Link class="navelement" to="/">
+          <div className="navbar">
+            <Link className="navelement" to="/urban-invention/">
               Home
             </Link>
-            <Link class="navelement" to="/game">
+            <Link className="navelement" to="/urban-invention/game">
               Game
             </Link>
-            <Link class="navelement" to="/references">
+            <Link className="navelement" to="/urban-invention/references">
               References
             </Link>
-            <Link class="navelement" to="/about">
+            <Link className="navelement" to="/urban-invention/about">
               About
             </Link>
           </div>
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/references">
-              <References />
-            </Route>
-            <Route path="/game">
-              <Level />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <div className="content">
+            <Switch>
+              <Route path="/urban-invention/about">
+                <About />
+              </Route>
+              <Route path="/urban-invention/references">
+                <References />
+              </Route>
+              <Route path="/urban-invention/game">
+                <Level />
+              </Route>
+              <Route path="/urban-invention/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+        <div className="footer">
+          <a
+            href="https://github.com/geo-bert/urban-invention"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Source Code
+          </a>
         </div>
       </Router>
     );
