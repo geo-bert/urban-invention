@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/urban-invention/static/css/main.1bcaf94b.chunk.css",
-    "main.js": "/urban-invention/static/js/main.e631ea40.chunk.js",
-    "main.js.map": "/urban-invention/static/js/main.e631ea40.chunk.js.map",
+    "main.css": "/urban-invention/static/css/main.f5a86266.chunk.css",
+    "main.js": "/urban-invention/static/js/main.2ee159ae.chunk.js",
+    "main.js.map": "/urban-invention/static/js/main.2ee159ae.chunk.js.map",
     "runtime-main.js": "/urban-invention/static/js/runtime-main.7ca4d012.js",
     "runtime-main.js.map": "/urban-invention/static/js/runtime-main.7ca4d012.js.map",
-    "static/js/2.bd93cf76.chunk.js": "/urban-invention/static/js/2.bd93cf76.chunk.js",
-    "static/js/2.bd93cf76.chunk.js.map": "/urban-invention/static/js/2.bd93cf76.chunk.js.map",
+    "static/js/2.99dfe533.chunk.js": "/urban-invention/static/js/2.99dfe533.chunk.js",
+    "static/js/2.99dfe533.chunk.js.map": "/urban-invention/static/js/2.99dfe533.chunk.js.map",
     "index.html": "/urban-invention/index.html",
-    "static/css/main.1bcaf94b.chunk.css.map": "/urban-invention/static/css/main.1bcaf94b.chunk.css.map",
-    "static/js/2.bd93cf76.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.bd93cf76.chunk.js.LICENSE.txt"
+    "static/css/main.f5a86266.chunk.css.map": "/urban-invention/static/css/main.f5a86266.chunk.css.map",
+    "static/js/2.99dfe533.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.99dfe533.chunk.js.LICENSE.txt",
+    "static/media/test.94525708.png": "/urban-invention/static/media/test.94525708.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7ca4d012.js",
-    "static/js/2.bd93cf76.chunk.js",
-    "static/css/main.1bcaf94b.chunk.css",
-    "static/js/main.e631ea40.chunk.js"
+    "static/js/2.99dfe533.chunk.js",
+    "static/css/main.f5a86266.chunk.css",
+    "static/js/main.2ee159ae.chunk.js"
   ]
 }
