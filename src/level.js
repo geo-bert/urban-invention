@@ -1,95 +1,89 @@
 import React from "react";
+import bgImage from "./test.png";
 
-function Blob(props) {
+function Blob({ i, onClick, bgImage }) {
+  const [x, y] = getPos(i);
   return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
-    </button>
+    <div
+      className="blob"
+      onClick={onClick}
+      style={{
+        backgroundPosition: `-${y * 100 + 5}px -${x * 100 + 5}px`,
+        backgroundImage: bgImage,
+      }}
+    />
   );
+}
+
+function DoneBlob({ bgImage }) {
+  return <div className="done-blob" style={{ backgroundImage: bgImage }} />;
+}
+
+function getPos(i) {
+  return [Math.floor(i / 4), i % 4];
 }
 
 export default class Level extends React.Component {
   constructor(props) {
     super(props);
-    let blobs = new Array(4);
-    this.free = 0;
+    let blobs = [];
 
-    for (let i = 0; i < blobs.length; i++) {
-      blobs[i] = new Array(4);
+    for (let i = 0; i < 15; i++) {
+      blobs.push(
+        <Blob
+          key={i}
+          i={i}
+          bgImage={`url("${bgImage}")`}
+          onClick={() => this.move(blobs[i])}
+        />
+      );
     }
-    for (let i = 0; i < 4; i++) {
-      for (let j = 0; j < 4; j++) {
-        blobs[i][j] = {
-          value: j + i * 4 !== 15 ? "" + (j + i * 4) : "",
-          onClick: () => this.onClick(i, j),
-        };
-      }
-    }
+    blobs.push(
+      <Blob
+        key={15}
+        i={15}
+        bgImage={"none"}
+        onClick={() => this.move(blobs[15])}
+      />
+    );
 
-    this.state = {
-      blobs,
-      free: { blob: blobs[3][3], x: 3, y: 3 },
-      valid: false,
-    };
+    this.state = { blobs, empty: blobs[15], valid: false };
   }
 
   render() {
-    if (this.state.valid) return <div>Done</div>;
     return (
-      <div className="game">
-        <div className="game-board">
-          {this.state.blobs.map((blob, x) => {
-            return (
-              <div className="board-row" key={x}>
-                {blob.map((b) => {
-                  return (
-                    <Blob value={b.value} onClick={b.onClick} key={b.value} />
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
+      <div className="board">
+        {this.state.valid ? (
+          <DoneBlob bgImage={`url("${bgImage}")`} />
+        ) : (
+          this.state.blobs
+        )}
       </div>
     );
   }
 
-  onClick(x, y) {
-    let blobs = this.state.blobs;
-    let free = this.state.free.blob;
-    let b = blobs[x][y];
+  move(el) {
+    if (el === this.state.empty) return;
 
-    if (b === free) return;
+    const blobs = [...this.state.blobs];
+    const emptyI = blobs.indexOf(this.state.empty);
+    const thisI = blobs.indexOf(el);
+    const [emptyX, emptyY] = getPos(emptyI);
+    const [thisX, thisY] = getPos(thisI);
 
-    if (this.dist(x, y) === 1) {
-      free.value = b.value;
-      b.value = "";
-      this.setState({
-        blobs,
-        free: { blob: b, x, y },
-        valid: this.validateBoard(),
-      });
+    if (Math.abs(emptyX - thisX) + Math.abs(emptyY - thisY) === 1) {
+      [blobs[emptyI], blobs[thisI]] = [blobs[thisI], blobs[emptyI]];
+      this.setState({ blobs });
+      this.validate(blobs);
     }
   }
 
-  dist(x, y) {
-    return Math.abs(x - this.state.free.x + y - this.state.free.y);
-  }
-
-  validateBoard() {
-    let blobs = this.state.blobs;
-    let width = blobs.length;
-
-    for (let x = 0; x < width; x++) {
-      let height = blobs[x].length;
-      for (let y = 0; y < height; y++) {
-        if (y + x * height === height * width - 1 && blobs[x][y].value === "")
-          break;
-
-        if (y + x * height + "" !== blobs[x][y].value) return false;
+  validate(blobs) {
+    for (let i = 0; i < blobs.length; i++) {
+      if (i !== blobs[i].props.i) {
+        return;
       }
     }
-
-    return true;
+    this.setState({ valid: true });
   }
 }

@@ -14,22 +14,20 @@ class Site extends React.Component {
     return (
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/game">Game</Link>
-              </li>
-              <li>
-                <Link to="/references">References</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-            </ul>
-          </nav>
+          <div class="navbar">
+            <Link class="navelement" to="/">
+              Home
+            </Link>
+            <Link class="navelement" to="/game">
+              Game
+            </Link>
+            <Link class="navelement" to="/references">
+              References
+            </Link>
+            <Link class="navelement" to="/about">
+              About
+            </Link>
+          </div>
           <Switch>
             <Route path="/about">
               <About />
