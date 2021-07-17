@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/urban-invention/static/css/main.f5a86266.chunk.css",
-    "main.js": "/urban-invention/static/js/main.2ee159ae.chunk.js",
-    "main.js.map": "/urban-invention/static/js/main.2ee159ae.chunk.js.map",
+    "main.css": "/urban-invention/static/css/main.847364fb.chunk.css",
+    "main.js": "/urban-invention/static/js/main.fa543643.chunk.js",
+    "main.js.map": "/urban-invention/static/js/main.fa543643.chunk.js.map",
     "runtime-main.js": "/urban-invention/static/js/runtime-main.7ca4d012.js",
     "runtime-main.js.map": "/urban-invention/static/js/runtime-main.7ca4d012.js.map",
-    "static/js/2.99dfe533.chunk.js": "/urban-invention/static/js/2.99dfe533.chunk.js",
-    "static/js/2.99dfe533.chunk.js.map": "/urban-invention/static/js/2.99dfe533.chunk.js.map",
+    "static/js/2.dfb1596d.chunk.js": "/urban-invention/static/js/2.dfb1596d.chunk.js",
+    "static/js/2.dfb1596d.chunk.js.map": "/urban-invention/static/js/2.dfb1596d.chunk.js.map",
     "index.html": "/urban-invention/index.html",
-    "static/css/main.f5a86266.chunk.css.map": "/urban-invention/static/css/main.f5a86266.chunk.css.map",
-    "static/js/2.99dfe533.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.99dfe533.chunk.js.LICENSE.txt",
-    "static/media/test.94525708.png": "/urban-invention/static/media/test.94525708.png"
+    "static/css/main.847364fb.chunk.css.map": "/urban-invention/static/css/main.847364fb.chunk.css.map",
+    "static/js/2.dfb1596d.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.dfb1596d.chunk.js.LICENSE.txt",
+    "static/media/door.png": "/urban-invention/static/media/door.66497cc3.png",
+    "static/media/drink.png": "/urban-invention/static/media/drink.cebfefa2.png",
+    "static/media/phone.png": "/urban-invention/static/media/phone.8cec92cf.png",
+    "static/media/toys.png": "/urban-invention/static/media/toys.a3ec9d6e.png",
+    "static/media/wooden_horse.png": "/urban-invention/static/media/wooden_horse.68c7b3a6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.7ca4d012.js",
-    "static/js/2.99dfe533.chunk.js",
-    "static/css/main.f5a86266.chunk.css",
-    "static/js/main.2ee159ae.chunk.js"
+    "static/js/2.dfb1596d.chunk.js",
+    "static/css/main.847364fb.chunk.css",
+    "static/js/main.fa543643.chunk.js"
   ]
 }
