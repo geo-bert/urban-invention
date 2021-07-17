@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-import Level from "./level";
-import Home from "./home";
-import References from "./references";
-import About from "./about";
+import Level from "./pages/level";
+import Home from "./pages/home";
+import References from "./pages/references";
+import About from "./pages/about";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 

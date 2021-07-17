@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "./test.png";
+import bgImage from "../test.png";
 
 function Blob({ i, onClick, bgImage }) {
   const [x, y] = getPos(i);
