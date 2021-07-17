@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../test.png";
+const images = require.context("../img", true);
 
 function Blob({ i, onClick, bgImage }) {
   const [x, y] = getPos(i);
@@ -15,25 +15,32 @@ function Blob({ i, onClick, bgImage }) {
   );
 }
 
-function DoneBlob({ bgImage }) {
-  return <div className="done-blob" style={{ backgroundImage: bgImage }} />;
+function DoneBlob({ bgImage, inc }) {
+  return (
+    <div
+      className="done-blob"
+      style={{ backgroundImage: bgImage }}
+      onClick={inc}
+    />
+  );
 }
 
 function getPos(i) {
   return [Math.floor(i / 4), i % 4];
 }
 
-export default class Level extends React.Component {
+export default class Board extends React.Component {
   constructor(props) {
     super(props);
     let blobs = [];
+    this.bgImage = images("./" + props.image).default;
 
     for (let i = 0; i < 15; i++) {
       blobs.push(
         <Blob
           key={i}
           i={i}
-          bgImage={`url("${bgImage}")`}
+          bgImage={`url("${this.bgImage}")`}
           onClick={() => this.move(blobs[i])}
         />
       );
@@ -47,14 +54,26 @@ export default class Level extends React.Component {
       />
     );
 
-    this.state = { blobs, empty: blobs[15], valid: false };
+    this.state = {
+      blobs: this.permutate(blobs, props.permutation),
+      empty: blobs[15],
+      valid: false,
+    };
+  }
+
+  permutate(array, permutation) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+      newArray.push(array[permutation[i]]);
+    }
+    return newArray;
   }
 
   render() {
     return (
       <div className="board">
         {this.state.valid ? (
-          <DoneBlob bgImage={`url("${bgImage}")`} />
+          <DoneBlob bgImage={`url("${this.bgImage}")`} inc={this.props.inc} />
         ) : (
           this.state.blobs
         )}
@@ -62,12 +81,12 @@ export default class Level extends React.Component {
     );
   }
 
-  move(el) {
-    if (el === this.state.empty) return;
+  move(element) {
+    if (element === this.state.empty) return;
 
     const blobs = [...this.state.blobs];
     const emptyI = blobs.indexOf(this.state.empty);
-    const thisI = blobs.indexOf(el);
+    const thisI = blobs.indexOf(element);
     const [emptyX, emptyY] = getPos(emptyI);
     const [thisX, thisY] = getPos(thisI);
 

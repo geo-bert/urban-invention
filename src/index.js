@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
-import Level from "./pages/level";
+import Game from "./pages/game";
 import Home from "./pages/home";
 import References from "./pages/references";
 import About from "./pages/about";
@@ -37,7 +37,7 @@ class Site extends React.Component {
                 <References />
               </Route>
               <Route path="/urban-invention/game">
-                <Level />
+                <Game />
               </Route>
               <Route path="/urban-invention/">
                 <Home />

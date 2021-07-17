@@ -110,3 +110,9 @@ body {
 .play-button:hover {
   background-color: #f87b65;
 }
+
+.chapter-text {
+  user-select: none;
+  font-family: Consolas;
+  font-size: xx-large;
+}
