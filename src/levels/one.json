@@ -1,0 +1,15 @@
+{
+    "board": [
+        0, 1, 2, 3, 4, 10, 7, 15, 8, 13, 6, 14, 12, 5, 9, 11
+    ],
+    "image": "phone.png",
+    "text": [
+        "Ugh..",
+        "Where am I?",
+        "What happened to me?",
+        "I can't see a thing. I can hardly move my limbs...",
+        "Am I in hell? ",
+        "I need to remember... think, think",
+        "What is this?"
+    ]
+}
