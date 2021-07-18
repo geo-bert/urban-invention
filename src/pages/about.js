@@ -6,24 +6,14 @@ export default class About extends React.Component {
       <div>
         <h1>About</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris
-          lectus, suscipit et ligula eget, pharetra finibus orci. Donec ornare
-          lacus vitae lacinia imperdiet. Etiam iaculis sapien nibh, eu fringilla
-          arcu egestas eget. Quisque nibh eros, sodales vel porttitor in,
-          ultrices sit amet orci. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Integer eget ornare justo, vitae tincidunt ex. Sed
-          nec cursus orci, nec tempor neque. Etiam at urna fringilla leo egestas
-          pretium. Donec sed arcu blandit, vehicula diam et, dapibus risus.
+          This website was created as part of a student project for the
+          university course "Discipline and Punish? BDSM, Power and Society" at
+          the Paris Lodron University of Salzburg.
         </p>
+        <p>This site was created using the React framework.</p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris
-          lectus, suscipit et ligula eget, pharetra finibus orci. Donec ornare
-          lacus vitae lacinia imperdiet. Etiam iaculis sapien nibh, eu fringilla
-          arcu egestas eget. Quisque nibh eros, sodales vel porttitor in,
-          ultrices sit amet orci. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Integer eget ornare justo, vitae tincidunt ex. Sed
-          nec cursus orci, nec tempor neque. Etiam at urna fringilla leo egestas
-          pretium. Donec sed arcu blandit, vehicula diam et, dapibus risus.
+          You can contact me here:{" "}
+          <a href="mailto:grybl.business@gmail.com">grybl.business@gmail.com</a>
         </p>
       </div>
     );

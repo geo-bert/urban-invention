@@ -113,6 +113,10 @@ body {
 
 .chapter-text {
   user-select: none;
-  font-family: Consolas;
+  font-family: "Consolas", monospace;
   font-size: xx-large;
+}
+
+a {
+  color: #e2e2e2;
 }
