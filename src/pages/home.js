@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink as Link } from "react-router-dom";
 
 export default class Home extends React.Component {
   render() {
@@ -25,9 +26,9 @@ export default class Home extends React.Component {
           nec cursus orci, nec tempor neque. Etiam at urna fringilla leo egestas
           pretium. Donec sed arcu blandit, vehicula diam et, dapibus risus.
         </p>
-        <a class="play-button" href="/urban-invention/game">
+        <Link class="play-button" to="/urban-invention/game">
           Play
-        </a>
+        </Link>
       </div>
     );
   }
