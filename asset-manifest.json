@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/urban-invention/static/css/main.0c01d0b7.chunk.css",
+    "main.css": "/urban-invention/static/css/main.f341a72f.chunk.css",
     "main.js": "/urban-invention/static/js/main.5305b809.chunk.js",
     "main.js.map": "/urban-invention/static/js/main.5305b809.chunk.js.map",
     "runtime-main.js": "/urban-invention/static/js/runtime-main.7ca4d012.js",
@@ -8,7 +8,7 @@
     "static/js/2.8cfd161a.chunk.js": "/urban-invention/static/js/2.8cfd161a.chunk.js",
     "static/js/2.8cfd161a.chunk.js.map": "/urban-invention/static/js/2.8cfd161a.chunk.js.map",
     "index.html": "/urban-invention/index.html",
-    "static/css/main.0c01d0b7.chunk.css.map": "/urban-invention/static/css/main.0c01d0b7.chunk.css.map",
+    "static/css/main.f341a72f.chunk.css.map": "/urban-invention/static/css/main.f341a72f.chunk.css.map",
     "static/js/2.8cfd161a.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.8cfd161a.chunk.js.LICENSE.txt",
     "static/media/door.png": "/urban-invention/static/media/door.66497cc3.png",
     "static/media/drink.png": "/urban-invention/static/media/drink.cebfefa2.png",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.7ca4d012.js",
     "static/js/2.8cfd161a.chunk.js",
-    "static/css/main.0c01d0b7.chunk.css",
+    "static/css/main.f341a72f.chunk.css",
     "static/js/main.5305b809.chunk.js"
   ]
 }
