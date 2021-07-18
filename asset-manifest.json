@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/urban-invention/static/css/main.847364fb.chunk.css",
-    "main.js": "/urban-invention/static/js/main.fa543643.chunk.js",
-    "main.js.map": "/urban-invention/static/js/main.fa543643.chunk.js.map",
+    "main.js": "/urban-invention/static/js/main.b1a7e9a8.chunk.js",
+    "main.js.map": "/urban-invention/static/js/main.b1a7e9a8.chunk.js.map",
     "runtime-main.js": "/urban-invention/static/js/runtime-main.7ca4d012.js",
     "runtime-main.js.map": "/urban-invention/static/js/runtime-main.7ca4d012.js.map",
-    "static/js/2.dfb1596d.chunk.js": "/urban-invention/static/js/2.dfb1596d.chunk.js",
-    "static/js/2.dfb1596d.chunk.js.map": "/urban-invention/static/js/2.dfb1596d.chunk.js.map",
+    "static/js/2.8c74b153.chunk.js": "/urban-invention/static/js/2.8c74b153.chunk.js",
+    "static/js/2.8c74b153.chunk.js.map": "/urban-invention/static/js/2.8c74b153.chunk.js.map",
     "index.html": "/urban-invention/index.html",
     "static/css/main.847364fb.chunk.css.map": "/urban-invention/static/css/main.847364fb.chunk.css.map",
-    "static/js/2.dfb1596d.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.dfb1596d.chunk.js.LICENSE.txt",
+    "static/js/2.8c74b153.chunk.js.LICENSE.txt": "/urban-invention/static/js/2.8c74b153.chunk.js.LICENSE.txt",
     "static/media/door.png": "/urban-invention/static/media/door.66497cc3.png",
     "static/media/drink.png": "/urban-invention/static/media/drink.cebfefa2.png",
     "static/media/phone.png": "/urban-invention/static/media/phone.8cec92cf.png",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7ca4d012.js",
-    "static/js/2.dfb1596d.chunk.js",
+    "static/js/2.8c74b153.chunk.js",
     "static/css/main.847364fb.chunk.css",
-    "static/js/main.fa543643.chunk.js"
+    "static/js/main.b1a7e9a8.chunk.js"
   ]
 }
