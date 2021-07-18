@@ -10,28 +10,28 @@ body {
 .blob {
   background: #6c608d;
   float: left;
-  height: 4.8vw;
-  width: 4.8vw;
+  height: 95px;
+  width: 95px;
   padding: 0;
   text-align: center;
   border-radius: 0.5vh;
 }
 
 .board {
-  padding: 0.5vw;
+  padding: 5px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 20vw;
-  height: 20vw;
+  width: 400px;
+  height: 400px;
   background-color: #6c608d;
-  gap: 0.3vw;
+  gap: 5px;
   border-radius: 1vh;
   margin: auto;
 }
 
 .done-blob {
-  width: 20vw;
-  height: 20vw;
+  width: 400px;
+  height: 400px;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
