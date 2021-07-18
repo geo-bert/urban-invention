@@ -17,7 +17,7 @@ export default class Game extends React.Component {
   }
 
   render() {
-    return <div>{this.currentLevel()}</div>;
+    return this.currentLevel();
   }
 
   currentLevel() {

@@ -20,8 +20,24 @@ export default class Chapter extends React.Component {
     if (this.state.index >= this.props.data.text.length) return this.board();
     else
       return (
-        <div onClick={() => this.setState({ index: this.state.index + 1 })}>
-          <p class="chapter-text">{this.props.data.text[this.state.index]}</p>
+        <div
+          class="chapter-text"
+          onClick={() => this.setState({ index: this.state.index + 1 })}
+        >
+          {this.props.data.text[this.state.index].split(" ").map((el) => {
+            return (
+              <div class="chapter-word">
+                {[...el].map((x, i) => (
+                  <span
+                    class="chapter-letter"
+                    style={{ animationDelay: `-0.${i % 5}s` }}
+                  >
+                    {x}
+                  </span>
+                ))}
+              </div>
+            );
+          })}
         </div>
       );
   }
@@ -35,9 +51,15 @@ export default class Chapter extends React.Component {
             image={this.props.data.image}
             inc={this.props.inc}
           />
-          <button onClick={this.props.inc}>Skip</button>
+          <div class="skip-button" onClick={this.props.inc}>
+            Skip
+          </div>
         </div>
       );
-    return <h1>The End</h1>;
+    return (
+      <div class="chapter-text">
+        <h1>The End</h1>
+      </div>
+    );
   }
 }

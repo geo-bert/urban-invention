@@ -1,51 +1,53 @@
 body {
   display: flex;
   justify-content: center;
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font: 1.5vh "Century Gothic", Futura, sans-serif;
+  margin: 2vh;
   background-color: #191925;
+  font-size: clamp(15px, 1vh, 15px);
 }
 
 .blob {
   background: #6c608d;
   float: left;
-  height: 95px;
-  width: 95px;
+  height: 4.8vw;
+  width: 4.8vw;
   padding: 0;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 0.5vh;
 }
 
 .board {
-  padding: 5px;
+  padding: 0.5vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 400px;
-  height: 400px;
+  width: 20vw;
+  height: 20vw;
   background-color: #6c608d;
-  gap: 5px;
-  border-radius: 10px;
+  gap: 0.3vw;
+  border-radius: 1vh;
+  margin: auto;
 }
 
 .done-blob {
-  width: 400px;
-  height: 400px;
+  width: 20vw;
+  height: 20vw;
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 4;
-  border-radius: 10px;
+  border-radius: 1vh;
 }
 
 .navbar {
   background-color: #302d44;
   display: flex;
-  width: 410px;
-  height: 40px;
+  width: clamp(300px, 21vw, 300px);
+  height: clamp(30px, 4vh, 30px);
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 1vh;
   align-items: stretch;
-  border-radius: 5px;
+  border-radius: 0.5vh;
   overflow: hidden;
 }
 
@@ -57,7 +59,7 @@ body {
   background-color: transparent;
   margin: 0;
   flex-grow: 1;
-  font-size: x-large;
+  font-size: clamp(18px, 2vh, 18px);
   width: max-content;
   text-decoration: none;
   color: #e2e2e2;
@@ -72,17 +74,17 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: flex;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 0.5vh;
+  padding: 2vh;
   background-color: #302d44;
   justify-content: center;
-  width: 600px;
-  height: 800px;
+  width: clamp(500px, 32vw, 500px);
+  height: clamp(700px, 85vh, 700px);
   color: #e2e2e2;
 }
 
 .footer a {
-  padding: 5px;
+  padding: 0.5vw;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -91,17 +93,17 @@ body {
 }
 
 .play-button {
-  font-size: xx-large;
+  font-size: 4vh;
   font-weight: bolder;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   margin: auto;
-  margin-top: 40px;
-  border-radius: 5px;
+  margin-top: 4vh;
+  border-radius: 0.5vh;
   display: flex;
-  width: 100px;
-  height: 50px;
+  width: clamp(80px, 5vw, 80px);
+  height: 5vh;
   text-decoration: none;
   color: #e2e2e2;
   background-color: #ff6347;
@@ -112,11 +114,57 @@ body {
 }
 
 .chapter-text {
+  display: flex;
   user-select: none;
   font-family: "Consolas", monospace;
-  font-size: xx-large;
+  font-size: clamp(25px, 3vh, 30px);
+  background-color: #191925;
+  width: 100%;
+  height: clamp(200px, 20vh, 200px);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.5vh;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.chapter-letter {
+  animation: wave 1s ease-in-out infinite alternate;
+  width: 1ch;
+}
+
+.chapter-word {
+  display: flex;
+  margin-left: 0.5ch;
 }
 
 a {
   color: #e2e2e2;
+}
+
+.chapter,
+h1 {
+  width: 100%;
+}
+
+.skip-button {
+  display: flex;
+  width: fit-content;
+  align-self: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+@keyframes wave {
+  from {
+    transform: translateY(-0.3vh);
+  }
+  to {
+    transform: translateY(0.3vh);
+  }
+}
+
+.references {
+  font-size: clamp(12px, 1vh, 12px);
 }
