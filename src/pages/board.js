@@ -1,7 +1,7 @@
 import React from "react";
 const images = require.context("../img", true);
 
-function Blob({ i, onClick, bgImage }) {
+function Blob({ i, onClick, bgImage, cursor }) {
   const [x, y] = getPos(i);
   return (
     <div
@@ -10,6 +10,7 @@ function Blob({ i, onClick, bgImage }) {
       style={{
         backgroundPosition: `-${y * 100 + 5}px -${x * 100 + 5}px`,
         backgroundImage: bgImage,
+        cursor: cursor,
       }}
     />
   );
@@ -42,6 +43,7 @@ export default class Board extends React.Component {
           i={i}
           bgImage={`url("${this.bgImage}")`}
           onClick={() => this.move(blobs[i])}
+          cursor={"pointer"}
         />
       );
     }
@@ -51,6 +53,7 @@ export default class Board extends React.Component {
         i={15}
         bgImage={"none"}
         onClick={() => this.move(blobs[15])}
+        cursor={"cursor"}
       />
     );
 

@@ -1,4 +1,6 @@
 import React from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+
 import Board from "./board";
 
 export default class Chapter extends React.Component {
@@ -10,7 +12,7 @@ export default class Chapter extends React.Component {
   render() {
     return (
       <div className="chapter">
-        <h1>Urban Invention - Chapter: {this.props.lvl}</h1>
+        <h1>Urban Invention - Chapter {this.props.lvl}</h1>
         {this.gameplay()}
       </div>
     );
@@ -20,25 +22,35 @@ export default class Chapter extends React.Component {
     if (this.state.index >= this.props.data.text.length) return this.board();
     else
       return (
-        <div
-          class="chapter-text"
-          onClick={() => this.setState({ index: this.state.index + 1 })}
-        >
-          {this.props.data.text[this.state.index].split(" ").map((el) => {
-            return (
-              <div class="chapter-word">
-                {[...el].map((x, i) => (
-                  <span
-                    class="chapter-letter"
-                    style={{ animationDelay: `-0.${i % 5}s` }}
-                  >
-                    {x}
-                  </span>
-                ))}
-              </div>
-            );
-          })}
-        </div>
+        <SwitchTransition mode="out-in">
+          <CSSTransition
+            classNames="fade"
+            addEndListener={(node, done) => {
+              node.addEventListener("transitionend", done, false);
+            }}
+            key={this.props.data.text[this.state.index]}
+          >
+            <div
+              class="chapter-text"
+              onClick={() => this.setState({ index: this.state.index + 1 })}
+            >
+              {this.props.data.text[this.state.index].split(" ").map((el) => {
+                return (
+                  <div class="chapter-word">
+                    {[...el].map((x, i) => (
+                      <span
+                        class="chapter-letter"
+                        style={{ animationDelay: `-0.${i % 5}s` }}
+                      >
+                        {x}
+                      </span>
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
+          </CSSTransition>
+        </SwitchTransition>
       );
   }
 

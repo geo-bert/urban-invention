@@ -1,14 +1,23 @@
+* {
+  --background: #191925;
+  --dark: #302d44;
+  --light: #6c608d;
+  --accent: #ff6347;
+  --white: #e2e2e2;
+}
+
 body {
   display: flex;
   justify-content: center;
   font: 1.5vh "Century Gothic", Futura, sans-serif;
   margin: 2vh;
-  background-color: #191925;
+  background-color: var(--background);
   font-size: clamp(15px, 1vh, 15px);
+  color: var(--white);
 }
 
 .blob {
-  background: #6c608d;
+  background: var(--light);
   float: left;
   height: 95px;
   width: 95px;
@@ -23,7 +32,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   width: 400px;
   height: 400px;
-  background-color: #6c608d;
+  background-color: var(--light);
   gap: 5px;
   border-radius: 1vh;
   margin: auto;
@@ -37,13 +46,14 @@ body {
   grid-row-start: 1;
   grid-row-end: 4;
   border-radius: 1vh;
+  cursor: pointer;
 }
 
 .navbar {
-  background-color: #302d44;
+  background-color: var(--dark);
   display: flex;
-  width: clamp(300px, 21vw, 300px);
-  height: clamp(30px, 4vh, 30px);
+  width: max-content;
+  height: max-content;
   padding: 0;
   margin-bottom: 1vh;
   align-items: stretch;
@@ -58,15 +68,20 @@ body {
   text-align: center;
   background-color: transparent;
   margin: 0;
+  border-right: 2px var(--background) solid;
+  padding: 0.5vh;
   flex-grow: 1;
-  font-size: clamp(18px, 2vh, 18px);
+  font-size: 3vh;
   width: max-content;
   text-decoration: none;
-  color: #e2e2e2;
+}
+
+.navelement:last-child {
+  border-right: none;
 }
 
 .navelement:hover {
-  background-color: #ff6347;
+  background-color: var(--accent);
 }
 
 .content {
@@ -76,11 +91,11 @@ body {
   display: flex;
   border-radius: 0.5vh;
   padding: 2vh;
-  background-color: #302d44;
+  background-color: var(--dark);
   justify-content: center;
   width: clamp(500px, 32vw, 500px);
   height: clamp(700px, 85vh, 700px);
-  color: #e2e2e2;
+  color: var(--white);
 }
 
 .footer a {
@@ -89,7 +104,7 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-decoration: none;
-  color: #e2e2e2;
+  color: var(--white);
 }
 
 .play-button {
@@ -105,12 +120,12 @@ body {
   width: clamp(80px, 5vw, 80px);
   height: 5vh;
   text-decoration: none;
-  color: #e2e2e2;
-  background-color: #ff6347;
+  color: var(--white);
+  background-color: var(--accent);
 }
 
 .play-button:hover {
-  background-color: #f87b65;
+  background-color: var(--accent);
 }
 
 .chapter-text {
@@ -118,7 +133,7 @@ body {
   user-select: none;
   font-family: "Consolas", monospace;
   font-size: clamp(25px, 3vh, 30px);
-  background-color: #191925;
+  background-color: var(--background);
   width: 100%;
   height: clamp(200px, 20vh, 200px);
   justify-content: center;
@@ -140,7 +155,7 @@ body {
 }
 
 a {
-  color: #e2e2e2;
+  color: var(--white);
 }
 
 .chapter,
@@ -167,4 +182,28 @@ h1 {
 
 .references {
   font-size: clamp(12px, 1vh, 12px);
+}
+
+.text {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.fade-enter {
+  color: var(--background);
+}
+
+.fade-enter-active {
+  color: var(--white);
+  transition: color 300ms ease-in-out;
+}
+
+.fade-exit {
+  color: var(--white);
+}
+
+.fade-exit-active {
+  color: var(--background);
+  transition: color 200ms ease-in-out;
 }
