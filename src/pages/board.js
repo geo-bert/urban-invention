@@ -57,7 +57,6 @@ export default class Board extends React.Component {
     this.state = {
       blobs: this.permutate(blobs, props.permutation),
       empty: blobs[15],
-      valid: false,
     };
   }
 
@@ -72,7 +71,7 @@ export default class Board extends React.Component {
   render() {
     return (
       <div className="board">
-        {this.state.valid ? (
+        {this.props.valid ? (
           <DoneBlob bgImage={`url("${this.bgImage}")`} inc={this.props.inc} />
         ) : (
           this.state.blobs
@@ -103,6 +102,10 @@ export default class Board extends React.Component {
         return;
       }
     }
+    this.setState({ valid: true });
+  }
+
+  skipBoard() {
     this.setState({ valid: true });
   }
 }

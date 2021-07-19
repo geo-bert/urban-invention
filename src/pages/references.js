@@ -13,6 +13,8 @@ export default class References extends React.Component {
               <a
                 class="reference"
                 href="https://www.kinkly.com/definition/11979/asphyxiation-play"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.kinkly.com/definition/11979/asphyxiation-play
               </a>
@@ -24,8 +26,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://en.wikipedia.org/wiki/Asphyxiant_gas
-              "
+                href="https://en.wikipedia.org/wiki/Asphyxiant_gas"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://en.wikipedia.org/wiki/Asphyxiant_gas
               </a>
@@ -37,8 +40,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://www.healthline.com/health/cerebral-hypoxia
-              "
+                href="https://www.healthline.com/health/cerebral-hypoxia"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.healthline.com/health/cerebral-hypoxia
               </a>
@@ -50,8 +54,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://www.shibariacademy.com/pages/basic-knots
-              "
+                href="https://www.shibariacademy.com/pages/basic-knots"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.shibariacademy.com/pages/basic-knots
               </a>
@@ -63,8 +68,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://lgbt.wikia.org/wiki/Gag_(BDSM)
-              "
+                href="https://lgbt.wikia.org/wiki/Gag_(BDSM)"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://lgbt.wikia.org/wiki/Gag_(BDSM)
               </a>
@@ -76,8 +82,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://www.revolutionarywarjournal.com/riding-the-wooden-horse-other-medieval-tortures-adopted-by-washingtons-army-during-the-american-revolution/
-              "
+                href="https://www.revolutionarywarjournal.com/riding-the-wooden-horse-other-medieval-tortures-adopted-by-washingtons-army-during-the-american-revolution/"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.revolutionarywarjournal.com/riding-the-wooden-horse-other-medieval-tortures-adopted-by-washingtons-army-during-the-american-revolution/
               </a>
@@ -89,8 +96,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://www.dailydot.com/irl/kink-bdsm-consent-problem/
-              "
+                href="https://www.dailydot.com/irl/kink-bdsm-consent-problem/"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.dailydot.com/irl/kink-bdsm-consent-problem/
               </a>
@@ -100,8 +108,9 @@ export default class References extends React.Component {
             Information about spiked drinks: <br />
             <a
               class="reference"
-              href="http://ontariokink.com/date-rape-drugs/
-              "
+              href="http://ontariokink.com/date-rape-drugs/"
+              target="_blank"
+              rel="noreferrer"
             >
               http://ontariokink.com/date-rape-drugs/
             </a>
@@ -112,8 +121,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://shithappenstothebestofus.home.blog/2020/07/28/the-date-rape-drug/
-              "
+                href="https://shithappenstothebestofus.home.blog/2020/07/28/the-date-rape-drug/"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://shithappenstothebestofus.home.blog/2020/07/28/the-date-rape-drug/
               </a>
@@ -125,8 +135,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://www.quora.com/Is-it-okay-to-perform-a-consensual-rape-fantasy-where-the-person-is-hypnotized-or-consensually-takes-Rohypnol-and-then-allows-themselves-to-be-fantasy-raped
-              "
+                href="https://www.quora.com/Is-it-okay-to-perform-a-consensual-rape-fantasy-where-the-person-is-hypnotized-or-consensually-takes-Rohypnol-and-then-allows-themselves-to-be-fantasy-raped"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.quora.com/Is-it-okay-to-perform-a-consensual-rape-fantasy-where-the-person-is-hypnotized-or-consensually-takes-Rohypnol-and-then-allows-themselves-to-be-fantasy-raped
               </a>
@@ -138,8 +149,9 @@ export default class References extends React.Component {
               <br />
               <a
                 class="reference"
-                href="https://www.medicinenet.com/script/main/art.asp?articlekey=51776
-              "
+                href="https://www.medicinenet.com/script/main/art.asp?articlekey=51776"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.medicinenet.com/script/main/art.asp?articlekey=51776
               </a>
@@ -152,6 +164,8 @@ export default class References extends React.Component {
               <a
                 class="reference"
                 href="https://www.vice.com/en/article/kwz9jx/erotic-asphyxiation-the-potentially-fatal-fetish-that-nobody-talks-about"
+                target="_blank"
+                rel="noreferrer"
               >
                 https://www.vice.com/en/article/kwz9jx/erotic-asphyxiation-the-potentially-fatal-fetish-that-nobody-talks-about
               </a>

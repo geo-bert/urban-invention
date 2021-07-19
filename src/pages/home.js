@@ -12,18 +12,17 @@ export default class Home extends React.Component {
           happened.
         </p>
         <h2>Tutorial</h2>
+        <p>You progress the texts by clicking on them. </p>
         <p>
-          There are five puzzles to solve. All in the form of a{" "}
-          <a href="https://en.wikipedia.org/wiki/15_puzzle">15 puzzle</a>. There
-          are five chapters plus a final one without a puzzle. The puzzles
-          increase in difficulty.
+          There are five chapters with a puzzle at the end of each, plus a final
+          one without one. The puzzles increase in difficulty and are{" "}
+          <a href="https://en.wikipedia.org/wiki/15_puzzle">15 puzzles</a>.
         </p>
         <p>
-          You progress the texts by clicking on them. The puzzles are
-          represented as four by four grids. There is one empty cell. To solve
-          the puzzle you have to click on an adjacent cell of the empty one to
-          move the pieces. The objective is to rearrange the cells in such a way
-          that a coherent image forms.
+          The puzzles are represented as four by four grids. There is one empty
+          cell. To solve the puzzle you have to click on an adjacent cell of the
+          empty one to move the pieces. The objective is to rearrange the cells
+          in such a way that a coherent image forms.
         </p>
         <Link class="play-button" to="/urban-invention/game">
           Play

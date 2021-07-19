@@ -4,19 +4,19 @@ import Board from "./board";
 export default class Chapter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { index: 0 };
+    this.state = { index: 0, valid: false };
   }
 
   render() {
     return (
       <div className="chapter">
         <h1>Urban Invention - Chapter: {this.props.lvl}</h1>
-        {this.gameplayLoop()}
+        {this.gameplay()}
       </div>
     );
   }
 
-  gameplayLoop() {
+  gameplay() {
     if (this.state.index >= this.props.data.text.length) return this.board();
     else
       return (
@@ -50,10 +50,10 @@ export default class Chapter extends React.Component {
             permutation={this.props.data.board}
             image={this.props.data.image}
             inc={this.props.inc}
+            validate={this.validate}
+            valid={this.state.valid}
           />
-          <div class="skip-button" onClick={this.props.inc}>
-            Skip
-          </div>
+          {this.skipButton()}
         </div>
       );
     return (
@@ -61,5 +61,18 @@ export default class Chapter extends React.Component {
         <h1>The End</h1>
       </div>
     );
+  }
+
+  validate = () => {
+    this.setState({ valid: true });
+  };
+
+  skipButton() {
+    if (!this.state.valid)
+      return (
+        <div class="skip-button" onClick={this.validate}>
+          Skip
+        </div>
+      );
   }
 }
