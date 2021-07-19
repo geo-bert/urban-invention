@@ -13,7 +13,7 @@ class Site extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <div className="website">
           <div className="navbar">
             <Link className="navelement" to="/urban-invention/">
               Home
