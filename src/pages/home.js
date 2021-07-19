@@ -24,7 +24,7 @@ export default class Home extends React.Component {
           empty one to move the pieces. The objective is to rearrange the cells
           in such a way that a coherent image forms.
         </p>
-        <Link class="play-button" to="/urban-invention/game">
+        <Link className="play-button" to="/urban-invention/game">
           Play
         </Link>
       </div>

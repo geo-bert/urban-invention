@@ -44,15 +44,15 @@ class Site extends React.Component {
               </Route>
             </Switch>
           </div>
-        </div>
-        <div className="footer">
-          <a
-            href="https://github.com/geo-bert/urban-invention"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View Source Code
-          </a>
+          <div className="footer">
+            <a
+              href="https://github.com/geo-bert/urban-invention"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Source Code
+            </a>
+          </div>
         </div>
       </Router>
     );

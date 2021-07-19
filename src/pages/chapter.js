@@ -31,15 +31,17 @@ export default class Chapter extends React.Component {
             key={this.props.data.text[this.state.index]}
           >
             <div
-              class="chapter-text"
+              className="chapter-text"
               onClick={() => this.setState({ index: this.state.index + 1 })}
+              key={"chapter-text"}
             >
               {this.props.data.text[this.state.index].split(" ").map((el) => {
                 return (
-                  <div class="chapter-word">
+                  <div key={el} className="chapter-word">
                     {[...el].map((x, i) => (
                       <span
-                        class="chapter-letter"
+                        key={`${i}${x}`}
+                        className="chapter-letter"
                         style={{ animationDelay: `-0.${i % 5}s` }}
                       >
                         {x}
@@ -69,7 +71,7 @@ export default class Chapter extends React.Component {
         </div>
       );
     return (
-      <div class="chapter-text">
+      <div className="chapter-text">
         <h1>The End</h1>
       </div>
     );
@@ -82,7 +84,7 @@ export default class Chapter extends React.Component {
   skipButton() {
     if (!this.state.valid)
       return (
-        <div class="skip-button" onClick={this.validate}>
+        <div className="skip-button" onClick={this.validate}>
           Skip
         </div>
       );
