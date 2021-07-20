@@ -4,7 +4,7 @@ import { NavLink as Link } from "react-router-dom";
 export default class Home extends React.Component {
   render() {
     return (
-      <div>
+      <div className="home">
         <h1>Urban Invention - Home</h1>
         <p>
           You wake up not knowing your whereabouts or why you are in this

@@ -31,25 +31,26 @@ export default class Chapter extends React.Component {
             key={this.props.data.text[this.state.index]}
           >
             <div
-              className="chapter-text"
+              className="chapter-block"
               onClick={() => this.setState({ index: this.state.index + 1 })}
-              key={"chapter-text"}
             >
-              {this.props.data.text[this.state.index].split(" ").map((el) => {
-                return (
-                  <div key={el} className="chapter-word">
-                    {[...el].map((x, i) => (
-                      <span
-                        key={`${i}${x}`}
-                        className="chapter-letter"
-                        style={{ animationDelay: `-0.${i % 5}s` }}
-                      >
-                        {x}
-                      </span>
-                    ))}
-                  </div>
-                );
-              })}
+              <div className="chapter-text" key={"chapter-text"}>
+                {this.props.data.text[this.state.index].split(" ").map((el) => {
+                  return (
+                    <div key={el} className="chapter-word">
+                      {[...el].map((x, i) => (
+                        <span
+                          key={`${i}${x}`}
+                          className="chapter-letter"
+                          style={{ animationDelay: `-0.${i % 5}s` }}
+                        >
+                          {x}
+                        </span>
+                      ))}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </CSSTransition>
         </SwitchTransition>
@@ -71,7 +72,7 @@ export default class Chapter extends React.Component {
         </div>
       );
     return (
-      <div className="chapter-text">
+      <div className="chapter-block">
         <h1>The End</h1>
       </div>
     );
