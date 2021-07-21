@@ -33,9 +33,13 @@ function getPos(i) {
 export default class Board extends React.Component {
   constructor(props) {
     super(props);
-    let blobs = [];
     this.bgImage = images("./" + props.image).default;
 
+    this.state = this.createBoard();
+  }
+
+  createBoard() {
+    let blobs = [];
     for (let i = 0; i < 15; i++) {
       blobs.push(
         <Blob
@@ -57,9 +61,10 @@ export default class Board extends React.Component {
       />
     );
 
-    this.state = {
-      blobs: this.permutate(blobs, props.permutation),
+    return {
+      blobs: this.permutate(blobs, this.props.permutation),
       empty: blobs[15],
+      valid: false,
     };
   }
 
@@ -73,12 +78,17 @@ export default class Board extends React.Component {
 
   render() {
     return (
-      <div className="board">
-        {this.props.valid ? (
-          <DoneBlob bgImage={`url("${this.bgImage}")`} inc={this.props.inc} />
-        ) : (
-          this.state.blobs
-        )}
+      <div className="extended-board">
+        {" "}
+        <div className="board">
+          {this.state.valid ? (
+            <DoneBlob bgImage={`url("${this.bgImage}")`} inc={this.props.inc} />
+          ) : (
+            this.state.blobs
+          )}
+        </div>
+        {this.resetButton()}
+        {this.skipButton()}
       </div>
     );
   }
@@ -110,5 +120,29 @@ export default class Board extends React.Component {
 
   skipBoard() {
     this.setState({ valid: true });
+  }
+
+  skipButton() {
+    if (!this.state.valid)
+      return (
+        <div
+          className="reset-button"
+          onClick={() => this.setState({ valid: true })}
+        >
+          Skip
+        </div>
+      );
+  }
+
+  resetButton() {
+    if (!this.state.valid)
+      return (
+        <div
+          className="skip-button"
+          onClick={() => this.setState(this.createBoard())}
+        >
+          Reset
+        </div>
+      );
   }
 }

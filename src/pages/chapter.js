@@ -6,7 +6,7 @@ import Board from "./board";
 export default class Chapter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { index: 0, valid: false };
+    this.state = { index: 0 };
   }
 
   render() {
@@ -60,34 +60,17 @@ export default class Chapter extends React.Component {
   board() {
     if (this.props.data.image)
       return (
-        <div>
-          <Board
-            permutation={this.props.data.board}
-            image={this.props.data.image}
-            inc={this.props.inc}
-            validate={this.validate}
-            valid={this.state.valid}
-          />
-          {this.skipButton()}
-        </div>
+        <Board
+          permutation={this.props.data.board}
+          image={this.props.data.image}
+          inc={this.props.inc}
+          validate={this.validate}
+        />
       );
     return (
       <div className="chapter-block">
         <h1>The End</h1>
       </div>
     );
-  }
-
-  validate = () => {
-    this.setState({ valid: true });
-  };
-
-  skipButton() {
-    if (!this.state.valid)
-      return (
-        <div className="skip-button" onClick={this.validate}>
-          Skip
-        </div>
-      );
   }
 }

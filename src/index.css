@@ -41,6 +41,18 @@ body {
   gap: 5px;
   border-radius: 1vh;
   margin: auto;
+  grid-area: a;
+}
+
+.extended-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "a a"
+    "b c";
+  width: 100%;
+  height: fit-content;
+  column-gap: 15px;
 }
 
 .done-blob {
@@ -185,12 +197,22 @@ a {
   color: var(--white);
 }
 
-.skip-button {
-  display: flex;
+.skip-button,
+.reset-button {
   width: fit-content;
-  margin: auto;
   margin-top: 1vh;
   cursor: pointer;
+}
+
+.skip-button {
+  grid-area: c;
+  width: 100%;
+}
+
+.reset-button {
+  grid-area: b;
+  width: 100%;
+  text-align: end;
 }
 
 @keyframes wave {
