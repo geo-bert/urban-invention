@@ -56,6 +56,13 @@ export default class Home extends React.Component {
           empty one to move the pieces. The objective is to rearrange the cells
           in such a way that a coherent image forms.
         </p>
+        <p>
+          The progress you make will{" "}
+          <b>
+            <u>not</u>
+          </b>{" "}
+          be saved and will reset upon revisiting the website!
+        </p>
         <Link className="play-button" to="/urban-invention/game">
           Play
         </Link>
