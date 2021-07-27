@@ -81,6 +81,7 @@ body {
   margin-bottom: 1%;
   align-items: stretch;
   border-radius: 0.2rem;
+  overflow: hidden;
 }
 
 .navelement {
