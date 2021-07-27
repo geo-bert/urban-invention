@@ -43,7 +43,7 @@ export default class Home extends React.Component {
           situation. Solve puzzles to reconstruct your memory and find out what
           happened.
         </p>
-        <h2>Tutorial</h2>
+        <h2>How to Play</h2>
         <p>You progress the texts by clicking on them. </p>
         <p>
           There are five chapters with a puzzle at the end of each, plus a final
