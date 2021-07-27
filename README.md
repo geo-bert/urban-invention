@@ -19,3 +19,5 @@ This game is intended for a more casual audience, that has not yet had any prior
 The aim was to purposely not include any hints towards the gender of the played character to enable the possibility of the player projecting themself onto it.
 
 I tried to use the scrambled puzzles as a metaphor for the mind that is in disarray. The text moves in a wavy pattern to signify that the entire story transpires in the mind of the protagonist.
+
+There is no intent behind the name of the game. It was just the name Github suggested when creating the repository. I could not and still can't think of a proper name.
